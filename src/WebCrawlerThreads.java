@@ -72,7 +72,7 @@ public class WebCrawlerThreads {
                 try {
                     Document document = Jsoup.connect(url).get();
                     String text = document.body().text();
-                    if (fileCounter < 10) {
+                    if (fileCounter <= 10) {
                         String filename = outputPath + "/file" + fileCounter + ".txt";
                         // Save the extracted text to a file
                         saveToFile(text, filename);

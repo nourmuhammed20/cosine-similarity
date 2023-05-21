@@ -60,11 +60,23 @@ public class CosineSimilarity {
             }
         }
     }
+
     public void calculateCosineSimilarityScores(List<String> texts, String query) {
         CosineSimilarity cs = new CosineSimilarity();
+        List<ScoredText> scoredTexts = new ArrayList<>();
+
+        // Calculate cosine similarity scores for each text
         for (int i = 0; i < texts.size(); i++) {
             double score = cs.score(query, texts.get(i));
-            System.out.println("Cosine similarity file " + (i+1) + " = " + score);
+            scoredTexts.add(new ScoredText(i + 1, score));
+        }
+
+        // Sort the scored texts based on the score in descending order
+        Collections.sort(scoredTexts, Comparator.comparing(ScoredText::getScore).reversed());
+        System.out.println("Cosine Similarity According To Rank : ");
+        // Print the sorted scores
+        for (ScoredText scoredText : scoredTexts) {
+            System.out.println("Cosine similarity file " + scoredText.getFileNumber() + " = " + scoredText.getScore());
         }
     }
 }

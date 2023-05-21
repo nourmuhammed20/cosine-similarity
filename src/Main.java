@@ -10,7 +10,7 @@ import java.nio.file.Files;
 public class Main {
     public static void main(String[] args) {
 //  Crawling Part
-        int maxDepth = 1; // Specify the maximum depth
+        int maxDepth = 2; // Specify the maximum depth
         WebCrawlerThreads crawler = new WebCrawlerThreads(maxDepth,"F:\\FCAI\\#3 year\\#2 term\\#1 NEW MATERIAL\\IR\\Assignments\\Crawler\\src\\Files");
 
 //      WebCrawler crawler = new WebCrawler(maxDepth);
