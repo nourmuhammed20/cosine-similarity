@@ -53,13 +53,14 @@ public class Main {
                 }
                 texts.add(text);
             }
-//            positionalIndex.printIndex();
+//           positionalIndex.printIndex();
             CosineSimilarity cs = new CosineSimilarity();
             cs.calculateCosineSimilarityScores(texts, Query);
             positionalIndex.searchQuery(Query);
-
+//            positionalIndex.GetDocumentWords();
             double scoreTest = cs.score("the best data science course", "data science is popular");
             System.out.println("Cosine similarity Section Example = " + scoreTest);
+            positionalIndex.Calc_TF_IDF(Query);
         }
     }
 }
