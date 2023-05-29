@@ -5,7 +5,7 @@ Cosine Similarity - Information Retrival
 Description
 -----------
 
-This project is designed to read text files, build an inverted index, and perform cosine similarity calculations to rank files based on their similarity to a given query. The project utilizes web crawling with JSoup to gather data from Wikipedia pages, with options to limit the crawl depth. Multi-threading is employed to enhance performance, ensuring faster content retrieval from Wikipedia pages.
+This project is designed to read text files, build an inverted index, and perform cosine similarity calculations to rank files based on their similarity to a given query. The project utilizes web crawling with JSoup in Java to gather data from Wikipedia pages, with options to limit the crawl depth. Multi-threading is employed to enhance performance, ensuring faster content retrieval from Wikipedia pages.
 
 Features
 --------
@@ -27,42 +27,26 @@ Installation
     git clone https://github.com/your-username/repository-name.git
     ```
     
-2.  Change to the project directory:
+2.  Import the project into your Java IDE.
     
-    bash
+3.  Download and add the JSoup library to your project.
     
-    ```bash
-    cd repository-name
-    ```
+4.  Update the path of the folder and files in the `Config.java` file according to your system:
     
-3.  Install the required dependencies:
+    java
     
-    bash
-    
-    ```bash
-    pip install -r requirements.txt
-    ```
-    
-4.  Update the path of the folder and files in the `config.py` file according to your system:
-    
-    python
-    
-    ```python
-    FOLDER_PATH = '/path/to/folder'  # Update folder path
-    FILENAMES = ['file1.txt', 'file2.txt', ..., 'file10.txt']  # Update file names
+    ```java
+    public class Config {
+        public static final String FOLDER_PATH = "/path/to/folder";  // Update folder path
+        public static final String[] FILENAMES = {"file1.txt", "file2.txt", ..., "file10.txt"};  // Update file names
+    }
     ```
     
 
 Usage
 -----
 
-1.  Run the main script:
-    
-    bash
-    
-    ```bash
-    python main.py
-    ```
+1.  Run the main Java class in your IDE.
     
 2.  Follow the prompts to initiate the process.
     
@@ -70,7 +54,7 @@ Usage
 Configuration
 -------------
 
-You can modify the following parameters in the `main.java` file:
+You can modify the following parameters in the `Config.java` file:
 
 *   `NUM_FILES`: Number of text files to read (default: 10)
 *   `CRAWL_DEPTH`: Depth of web crawling (default: 2)
