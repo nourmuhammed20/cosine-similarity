@@ -70,7 +70,7 @@ Usage
 Configuration
 -------------
 
-You can modify the following parameters in the `config.py` file:
+You can modify the following parameters in the `main.java` file:
 
 *   `NUM_FILES`: Number of text files to read (default: 10)
 *   `CRAWL_DEPTH`: Depth of web crawling (default: 2)
